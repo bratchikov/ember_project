@@ -1,0 +1,36 @@
+<div class="ui grid three column">
+  {{#each model as |channel|}}
+    <div class="column">
+      <div class="ui segment">
+        <div class="ui medium header centered">{{channel.id}}</div>
+        <table class="ui celled table">
+          <thead>
+            <tr>
+              <th>рейтинг</th>
+              <th>время</th>
+              <th>название</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each model as |item|}}
+              <tr>
+                <td>
+                  {{ui-rating
+                    initialRating=rating
+                    rating=rating
+                    maxRating=1
+                    onRate=(action (mut rating1))
+                  }}
+                </td>
+                <td>{{item}}</td>
+                <td>lol</td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+{{outlet}}
