@@ -1,0 +1,14 @@
+{{#each sortedPrograms as |program programId|}}
+<tr class={{first-program programId}}>
+  <td>
+    {{ui-rating
+      initialRating=rating
+      rating=rating
+      maxRating=1
+      onRate=(action (mut rating1))
+    }}
+  </td>
+  <td>{{programId}}</td>
+  <td onclick={{action 'openModalPanel'}}>{{program.name}}</td>
+</tr>
+{{/each}}

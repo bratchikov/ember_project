@@ -13,7 +13,7 @@ let channels = [
         "id": "2",
         "name": "program2",
         "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem.",
-        "date": "14:00"
+        "date": "15:00"
       }
     ]
   }, {
@@ -28,12 +28,12 @@ let channels = [
         "id": "2",
         "name": "program2",
         "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem.",
-        "date": "14:00"
+        "date": "16:00"
       }, {
         "id": "3",
         "name": "program3",
         "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem.",
-        "date": "14:00"
+        "date": "15:00"
       }
     ]
   }, {
