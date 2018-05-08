@@ -7,9 +7,15 @@ export default Ember.Component.extend({
     return [`date:asc`];
   }),
   actions: {
-    openModalPanel() {
-      console.log('click');
+    showDetails() {
+      this.toggleProperty('showDetails');
+      console.log('lol2');
       return true;
-    }
+    },
+    openModal: function(name) {
+      Ember.$('.ui.' + name + '.modal').modal('show');
+      console.log('lol');
+    },
+
   },
 });

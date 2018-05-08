@@ -12,6 +12,9 @@
           </tr>
         </thead>
         {{program-list programs=channel.programs}}
+        {{#if isShowingBody}}
+          <p>lol{{{body}}}</p>
+        {{/if}}
       </table>
     </div>
   </div>

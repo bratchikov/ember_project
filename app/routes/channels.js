@@ -47,10 +47,10 @@ let channels = [
       }
     ]
   }
-]
+];
 
 export default Ember.Route.extend({
   model() {
     return channels;
-  }
+  },
 });
