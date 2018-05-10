@@ -1,5 +1,5 @@
-{{#each sortedPrograms as |program programId|}}
-<tr class={{first-program programId}}>
+{{#each sortedPrograms as |program index|}}
+<tr class={{first-program index}}>
   <td>
     {{ui-rating
       initialRating=rating
@@ -8,10 +8,7 @@
       onRate=(action (mut rating1))
     }}
   </td>
-  <td>
-    <h3><button {{action "toggleBody"}}>{{title}}</button></h3>
-
-  </td>
+  <td>{{program.date}}</td>
   <td onclick={{action 'openModal' 'profile'}}>{{program.name}}</td>
 </tr>
 

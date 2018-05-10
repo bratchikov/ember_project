@@ -7,15 +7,9 @@ export default Ember.Component.extend({
     return [`date:asc`];
   }),
   actions: {
-    showDetails() {
-      this.toggleProperty('showDetails');
-      console.log('lol2');
-      return true;
-    },
     openModal: function(name) {
       Ember.$('.ui.' + name + '.modal').modal('show');
       console.log('lol');
     },
-
   },
 });
