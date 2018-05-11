@@ -1,21 +1,20 @@
-<div class="ui grid three column">
-  {{#each model as |channel|}}
+<div class="ui grid">
   <div class="column">
     <div class="ui segment">
-      <div class="ui medium header centered">{{channel.id}}</div>
       <table class="ui celled table">
         <thead>
           <tr>
             <th>рейтинг</th>
             <th>время</th>
             <th>название</th>
+            <th>id-программы</th>
+            <th>id-канала</th>
           </tr>
         </thead>
-        {{program-list programs=channel.programs}}
+        {{program-list programs=model}}
       </table>
     </div>
   </div>
-  {{/each}}
 </div>
 
 {{outlet}}

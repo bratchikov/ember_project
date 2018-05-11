@@ -1,34 +1,32 @@
 {{#each sortedPrograms as |program index|}}
-<tr class={{first-program index}}>
-  <td>
-    {{ui-rating
-      initialRating=rating
-      rating=rating
-      maxRating=1
-      onRate=(action (mut rating1))
-    }}
-  </td>
-  <td>{{program.date}}</td>
-  <td onclick={{action 'openModal' 'profile'}}>{{program.name}}</td>
-</tr>
 
-{{#ui-modal name="profile" class="profile"}}
-  <i class="close icon"></i>
-  <div class="header">
-    {{program.name}}
-  </div>
-  <div class="image content">
-    <div class="ui medium image">
-      <img src="http://semantic-ui.com/images/avatar/large/chris.jpg">
+  <tr class={{current-moment index program.data}}>
+    <td>
+      {{ui-rating
+        initialRating=rating
+        rating=rating
+        maxRating=1
+        onRate=(action (mut rating1))
+      }}
+    </td>
+    <td>{{program.date}}</td>
+    <td onclick={{action 'openModal' program.id program.channelId}}>{{program.name}}</td>
+    <td>{{program.id}}</td>
+    <td>{{program.channelId}}</td>
+  </tr>
+
+  {{#ui-modal name="profile" class=(hard-class program.id program.channelId)}}
+    <i class="close icon"></i>
+    <div class="header">
+      name: {{program.name}}, id-program: {{program.id}}, id-channel: {{program.channelId}}
     </div>
-    <div class="description">
-      <div class="ui header">We've auto-chosen a profile image for you.</div>
-      <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
-      <p>Is it okay to use this photo?</p>
+    <div class="content description">
+      <p>{{program.info}}</p>
     </div>
-  </div>
-{{/ui-modal}}
+  {{/ui-modal}}
 
 {{/each}}
 
+<button {{action 'componentAction'}}>foobar</button>
+{{my-component}}
 
