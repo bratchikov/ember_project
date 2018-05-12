@@ -1,6 +1,5 @@
 {{#each sortedPrograms as |program index|}}
-
-  <tr class={{current-moment index program.data}}>
+  <tr class={{current-moment sortedPrograms index}}>
     <td>
       {{ui-rating
         initialRating=rating
@@ -10,23 +9,12 @@
       }}
     </td>
     <td>{{program.date}}</td>
-    <td onclick={{action 'openModal' program.id program.channelId}}>{{program.name}}</td>
+    <td onclick={{action 'toggleModalWindow' program.name program.info}}>{{program.name}}</td>
     <td>{{program.id}}</td>
     <td>{{program.channelId}}</td>
   </tr>
-
-  {{#ui-modal name="profile" class=(hard-class program.id program.channelId)}}
-    <i class="close icon"></i>
-    <div class="header">
-      name: {{program.name}}, id-program: {{program.id}}, id-channel: {{program.channelId}}
-    </div>
-    <div class="content description">
-      <p>{{program.info}}</p>
-    </div>
-  {{/ui-modal}}
-
 {{/each}}
 
-<button {{action 'componentAction'}}>foobar</button>
-{{my-component}}
+{{modal-window}}
+
 

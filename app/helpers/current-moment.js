@@ -1,7 +1,9 @@
 import Ember from 'ember';
 
-export function currentMoment(params, a/*, hash*/) {
-  return params == 0 ? 'active' : '';
-}
+export default Ember.Helper.extend({
+  compute([programsArray, index]) {
+    const minDate = programsArray.reduce((prev, current) => (prev.date < current.date) ? prev : current).date;
 
-export default Ember.Helper.helper(currentMoment);
+    return programsArray[index].date === minDate ? 'active' : '';
+  }
+});
