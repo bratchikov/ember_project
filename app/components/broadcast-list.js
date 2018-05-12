@@ -5,17 +5,17 @@ export default Ember.Component.extend({
   classNames: ['tbody'],
   // attributeBindings: ['tbodyStyle:style'],
   // tbodyStyle: 'background-color: blue; font-size: .9em;',
-  programManager: Ember.inject.service(),
+  broadcastManager: Ember.inject.service(),
   
-  sortedPrograms: Ember.computed.sort('programs', 'sortDefinition'),
+  sortedBroadcasts: Ember.computed.sort('broadcasts', 'sortDefinition'),
   sortDefinition: Ember.computed(function() {
     return [`date:asc`];
   }),
 
   actions: {
-    toggleModalWindow(programName, programInfo) {
-      this.get('programManager').addNameAndInfo(programName, programInfo);
-      Ember.$('.ui.profile.profile.modal').modal('show');
+    toggleModalWindow(broadcastName, broadcastInfo) {
+      this.get('broadcastManager').addNameAndInfo(broadcastName, broadcastInfo);
+      Ember.$('.ui.profile.modal').modal('show');
     },
   },
 });

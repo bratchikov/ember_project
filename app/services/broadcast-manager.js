@@ -1,12 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Service.extend({
-  programName: null,
-  programInfo: null,
+  broadcastName: null,
+  broadcastInfo: null,
   minDate: null,
 
   addNameAndInfo(name, info) {
-    this.set('programName', name);
-    this.set('programInfo', info);
+    this.set('broadcastName', name);
+    this.set('broadcastInfo', info);
   },
 });

@@ -1,0 +1,21 @@
+{{#each sortedBroadcasts as |broadcast index|}}
+  <tr class={{current-moment sortedBroadcasts index}}>
+    <td>
+      {{ui-rating
+        initialRating=rating
+        rating=rating
+        maxRating=1
+        onRate=(action (mut rating1))
+      }}
+    </td>
+    <td>{{broadcast.date}}</td>
+    <td onclick={{action 'toggleModalWindow' broadcast.name broadcast.info}}>{{broadcast.name}}</td>
+    <td>{{broadcast.id}}</td>
+    <td>{{broadcast.broadcastId}}</td>
+    <td>{{broadcast.channelId}}</td>
+  </tr>
+{{/each}}
+
+{{modal-window}}
+
+

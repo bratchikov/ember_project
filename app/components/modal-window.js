@@ -1,12 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  programManager: Ember.inject.service(),
+  broadcastManager: Ember.inject.service(),
 
-  programName: Ember.computed('programManager.programName', function() {
-    return this.get('programManager.programName');
+  broadcastName: Ember.computed('broadcastManager.broadcastName', function() {
+    return this.get('broadcastManager.broadcastName');
   }),
-  programInfo: Ember.computed('programManager.programInfo', function() {
-    return this.get('programManager.programInfo');
+  broadcastInfo: Ember.computed('broadcastManager.broadcastInfo', function() {
+    return this.get('broadcastManager.broadcastInfo');
   }),
 });

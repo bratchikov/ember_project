@@ -1,80 +1,91 @@
 import Ember from 'ember';
 
-let programs = [
+let broadcasts = [
   {
     "id": "1",
+    "broadcastId": "1",
     "channelId": "1",
-    "name": "program1",
+    "name": "broadcast1",
     "info": "1-Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem.",
     "date": "14:00",
     "type": "per"
   }, {
     "id": "2",
+    "broadcastId": "1",
     "channelId": "2",
-    "name": "program2",
+    "name": "broadcast2",
     "info": "2-Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem.",
     "date": "15:00",
     "type": "once"
   }, {
     "id": "3",
+    "broadcastId": "1",
     "channelId": "3",
-    "name": "program3",
+    "name": "broadcast3",
     "info": "3-Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem.",
     "date": "14:00",
     "type": "per"
   }, {
     "id": "4",
+    "broadcastId": "1",
     "channelId": "2",
-    "name": "program4",
+    "name": "broadcast4",
     "info": "4-Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem.",
     "date": "16:00",
     "type": "once"
   }, {
     "id": "5",
+    "broadcastId": "1",
     "channelId": "2",
-    "name": "program5",
+    "name": "broadcast5",
     "info": "5-Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem.",
     "date": "15:00",
     "type": "once"
   }, {
     "id": "6",
+    "broadcastId": "1",
     "channelId": "1",
-    "name": "program6",
+    "name": "broadcast6",
     "info": "6-Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem.",
     "date": "15:00",
     "type": "per"
   }, {
     "id": "7",
+    "broadcastId": "1",
     "channelId": "3",
-    "name": "program7",
+    "name": "broadcast7",
     "info": "7-Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem.",
     "date": "14:00",
     "type": "once"
   }, {
     "id": "8",
+    "broadcastId": "1",
     "channelId": "3",
-    "name": "program8",
+    "name": "broadcast8",
     "info": "8-Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem.",
     "date": "15:00",
     "type": "per"
   }, {
     "id": "9",
+    "broadcastId": "1",
     "channelId": "2",
-    "name": "program9",
+    "name": "broadcast9",
     "info": "9-Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem.",
     "date": "16:00",
     "type": "per"
   }, {
     "id": "10",
+    "broadcastId": "1",
     "channelId": "1",
-    "name": "program10",
+    "name": "broadcast10",
     "info": "10-Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem.",
     "date": "16:00",
     "type": "per"
   }, {
     "id": "11",
+    "broadcastId": "1",
     "channelId": "1",
-    "name": "program11",
+    "name": "broadcast11",
     "info": "11-Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem.",
     "date": "16:00",
     "type": "per"
@@ -83,6 +94,6 @@ let programs = [
 
 export default Ember.Route.extend({
   model() {
-    return programs;
+    return broadcasts;
   },
 });

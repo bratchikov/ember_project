@@ -1,9 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Helper.extend({
-  compute([programsArray, index]) {
-    const minDate = programsArray.reduce((prev, current) => (prev.date < current.date) ? prev : current).date;
+  compute([broadcastsArray, index]) {
+    const minDate = broadcastsArray.reduce((prev, current) => (prev.date < current.date) ? prev : current).date;
 
-    return programsArray[index].date === minDate ? 'active' : '';
+    return broadcastsArray[index].date === minDate ? 'active' : '';
   }
 });

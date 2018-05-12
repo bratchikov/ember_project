@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('service:program-manager', 'Unit | Service | program manager', {
+moduleFor('service:broadcast-manager', 'Unit | Service | broadcast manager', {
   // Specify the other units that are required for this test.
   // needs: ['service:foo']
 });
