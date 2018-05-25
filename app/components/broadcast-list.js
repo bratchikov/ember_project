@@ -5,8 +5,9 @@ export default Ember.Component.extend({
   classNames: ['tbody'],
   // attributeBindings: ['tbodyStyle:style'],
   // tbodyStyle: 'background-color: blue; font-size: .9em;',
+  broadcasts: null,
   broadcastManager: Ember.inject.service(),
-  
+
   sortedBroadcasts: Ember.computed.sort('broadcasts', 'sortDefinition'),
   sortDefinition: Ember.computed(function() {
     return [`date:asc`];

@@ -8,3 +8,11 @@
   right: 0;
   top: 0;
 }
+.link-span {
+  color: #4183C4;
+  text-decoration: none;
+  cursor: pointer;
+}
+.link-span {
+  color: #1e70bf;
+}

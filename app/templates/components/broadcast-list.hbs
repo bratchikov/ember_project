@@ -9,9 +9,12 @@
       }}
     </td>
     <td>{{broadcast.date}}</td>
-    <td onclick={{action 'toggleModalWindow' broadcast.name broadcast.info}}>{{broadcast.name}}</td>
-    <td>{{broadcast.id}}</td>
-    <td>{{broadcast.programId}}</td>
+    <td>
+      {{broadcast.name}}
+      <span class="link-span" onclick={{action 'toggleModalWindow' broadcast.name broadcast.info}}>(Подробнее)</span>
+    </td>
+    <td>{{broadcast.broadcastId}}</td>
+    <td>{{broadcast.programId}} {{#link-to "program" broadcast.id }}(Подробнее){{/link-to}}</td>
     <td>{{broadcast.channelId}}</td>
   </tr>
 {{/each}}
