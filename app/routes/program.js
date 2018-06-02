@@ -136,22 +136,22 @@ const channels = [
       }
     ]
   }
-]
+];
 
 const getBroadcastArray = (programId, channelId) => {
   const programs = channels.find(channel => {
-    return channel.id == channelId ? true : false
-  })
+    return channel.id == channelId ? true : false; //находим нужный канал
+  });
 
   const broadcastArray = programs.programArray.find(program => {
-    return program.id == programId ? true : false
-  })
+    return program.id == programId ? true : false; //находим нужную программу
+  });
 
-  return broadcastArray.broadcastArray
-}
+  return broadcastArray.broadcastArray; //массив передач одной программы
+};
 
 export default Ember.Route.extend({
   model(params) {
-    return getBroadcastArray(params.programId, params.channelId)
+    return getBroadcastArray(params.programId, params.channelId);
   }
 });

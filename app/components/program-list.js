@@ -8,8 +8,8 @@ export default Ember.Component.extend({
   broadcastArray: [],
 
   getProgramOfBroadcasts: Ember.computed('broadcastArray', function() {
-    const broadcastArray = this.get('broadcastArray')
-    console.log('ol')
-    return getProgramCollection(broadcastArray)
+    const broadcastArray = this.get('broadcastArray');
+
+    return getProgramCollection(broadcastArray);
   })
 });

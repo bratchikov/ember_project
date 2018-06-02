@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 const {Route, set} = Ember;
 
-let b = [
+let broadcasts = [
   {
     'id': 0,
     'startTime': '00:00',
@@ -111,11 +111,11 @@ let b = [
     'channelId': 1,
     'programId': 1
   }
-]
+];
 
 export default Route.extend({
   model() {
-    return b;
+    return broadcasts;
     // return this.store.findAll('channel');
   },
   setupController(controller, model) {
