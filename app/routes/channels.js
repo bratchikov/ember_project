@@ -6,7 +6,7 @@ let broadcasts = [
   {
     'id': 0,
     'startTime': '00:00',
-    'allTime': 60,
+    'allTime': 90,
     'broadcastName': 'Broadcast_1',
     'info': 'infooooooooooooooooooooooooooooooooooooooooooooooooofni',
     'channelId': 0,
@@ -14,7 +14,7 @@ let broadcasts = [
   },
   {
     'id': 1,
-    'startTime': '01:00',
+    'startTime': '01:30',
     'allTime': 120,
     'broadcastName': 'Broadcast_2',
     'info': 'infooooooooooooooooooooooooooooooooooooooooooooooooofni',
@@ -23,8 +23,8 @@ let broadcasts = [
   },
   {
     'id': 2,
-    'startTime': '03:00',
-    'allTime': 60,
+    'startTime': '03:30',
+    'allTime': 45,
     'broadcastName': 'Broadcast_3',
     'info': 'infooooooooooooooooooooooooooooooooooooooooooooooooofni',
     'channelId': 0,
@@ -32,8 +32,8 @@ let broadcasts = [
   },
   {
     'id': 3,
-    'startTime': '04:00',
-    'allTime': 60,
+    'startTime': '04:15',
+    'allTime': 75,
     'broadcastName': 'Broadcast_4',
     'info': 'infooooooooooooooooooooooooooooooooooooooooooooooooofni',
     'channelId': 0,
@@ -41,8 +41,8 @@ let broadcasts = [
   },
   {
     'id': 4,
-    'startTime': '05:00',
-    'allTime': 120,
+    'startTime': '05:30',
+    'allTime': 150,
     'broadcastName': 'Broadcast_1',
     'info': 'infooooooooooooooooooooooooooooooooooooooooooooooooofni',
     'channelId': 0,
@@ -50,7 +50,7 @@ let broadcasts = [
   },
   {
     'id': 5,
-    'startTime': '07:00',
+    'startTime': '08:00',
     'allTime': 60,
     'broadcastName': 'Broadcast_2',
     'info': 'infooooooooooooooooooooooooooooooooooooooooooooooooofni',
@@ -60,7 +60,7 @@ let broadcasts = [
   {
     'id': 6,
     'startTime': '00:00',
-    'allTime': 120,
+    'allTime': 135,
     'broadcastName': 'Broadcast_1',
     'info': 'infooooooooooooooooooooooooooooooooooooooooooooooooofni',
     'channelId': 1,
@@ -68,8 +68,8 @@ let broadcasts = [
   },
   {
     'id': 7,
-    'startTime': '02:00',
-    'allTime': 60,
+    'startTime': '02:15',
+    'allTime': 75,
     'broadcastName': 'Broadcast_2',
     'info': 'infooooooooooooooooooooooooooooooooooooooooooooooooofni',
     'channelId': 1,
@@ -77,7 +77,7 @@ let broadcasts = [
   },
   {
     'id': 8,
-    'startTime': '03:00',
+    'startTime': '03:30',
     'allTime': 60,
     'broadcastName': 'Broadcast_3',
     'info': 'infooooooooooooooooooooooooooooooooooooooooooooooooofni',
@@ -86,8 +86,8 @@ let broadcasts = [
   },
   {
     'id': 9,
-    'startTime': '04:00',
-    'allTime': 120,
+    'startTime': '04:30',
+    'allTime': 90,
     'broadcastName': 'Broadcast_1',
     'info': 'infooooooooooooooooooooooooooooooooooooooooooooooooofni',
     'channelId': 1,

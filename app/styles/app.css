@@ -16,3 +16,12 @@
 .link-span {
   color: #1e70bf;
 }
+span:hover, a:hover {
+  text-decoration: underline;
+}
+tr:hover {
+  background: #efefef;
+}
+th {
+  max-width: 100px;
+}
