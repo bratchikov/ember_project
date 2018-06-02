@@ -1,12 +1,14 @@
 {{#each sortedBroadcasts as |broadcast index|}}
   <tr class={{current-moment sortedBroadcasts index}}>
     <td>
-      {{ui-rating
-        initialRating=rating
-        rating=rating
-        maxRating=1
-        onRate=(action (mut rating1))
-      }}
+      <div class='ui rating {{index}}' onclick={{action 'activeRating' index}}>
+        {{ui-rating
+          initialRating=rating
+          rating=rating
+          maxRating=1
+          onRate=(action (mut index))
+        }}
+      </div>
     </td>
     <td>{{broadcast.startTime}}</td>
     <td>
