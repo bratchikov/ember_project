@@ -1,6 +1,6 @@
-{{#each getProgramOfBroadcasts as |broadcast|}}
+{{#each getProgramOfBroadcasts as |broadcast index|}}
   {{#each broadcast.collection as |broadcastBlock|}}
-    <tr>
+    <tr class={{broadcast-start-time getProgramOfBroadcasts broadcastBlock.startTime broadcastBlock.id index}}>
       <td>{{broadcastBlock.startTime}}</td>
       <td>{{ads-block broadcastBlock.id}}</td>
       <td>{{broadcast.endProgramTime}}</td>
