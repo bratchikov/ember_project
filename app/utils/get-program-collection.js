@@ -1,14 +1,4 @@
-export default function moreProgram(broadcastsArray) {
-
-    //входящий массив программ
-    // let enterArray = [
-    //   {'id': '1', 'startTime': '2:00', 'allTime': 30},
-    //   {'id': '2', 'startTime': '2:30', 'allTime': 120},
-    //   {'id': '3', 'startTime': '4:30', 'allTime': 60},
-    //   {'id': '4', 'startTime': '5:30', 'allTime': 30},
-    //   {'id': '5', 'startTime': '6:00', 'allTime': 120},
-    //   {'id': '6', 'startTime': '8:00', 'allTime': 120},
-    // ]
+export default function getProgramCollection(broadcastArray) {
 
     //функция добавления времени
     const concatTime = (startTime, allTime) => {
@@ -37,7 +27,7 @@ export default function moreProgram(broadcastsArray) {
     }
 
     //построение коллекции программ
-    let endCollection = broadcastsArray.reduce(function(prev, curr) {
+    let endCollection = broadcastArray.reduce(function(prev, curr) {
 
       //вычисляем время начала передачи в зависимости от конца предыдущей передачи
       let startTimeCurrentCollection
@@ -92,7 +82,7 @@ export default function moreProgram(broadcastsArray) {
       }
 
       //построение коллекции передач
-      for(i=0; i < blocks; i++) {
+      for(let i=0; i < blocks; i++) {
         let lastItem = blocksArray[blocksArray.length - 1]
 
         if(typeof lastItem === 'undefined') {
@@ -137,7 +127,5 @@ export default function moreProgram(broadcastsArray) {
       return [...prev, collectionItem];
     }, []);
 
-    console.log('lol=', endCollection)
-
-  return true;
+  return endCollection;
 }

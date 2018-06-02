@@ -1,0 +1,10 @@
+{{#each getProgramOfBroadcasts as |broadcast|}}
+  {{#each broadcast.collection as |broadcastBlock|}}
+    <tr>
+      <td>{{broadcastBlock.startTime}}</td>
+      <td>{{current-ads broadcastBlock.id}}</td>
+      <td>{{broadcast.endProgramTime}}</td>
+      <td>{{broadcast.id}}</td>
+    </tr>
+  {{/each}}
+{{/each}}

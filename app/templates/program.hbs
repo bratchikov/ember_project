@@ -1,6 +1,22 @@
-<h2>Route program</h2>
+<h1 class="ui centered grid">Распиcание программы</h1>
+
 <h3>{{#link-to "index"}}Prev{{/link-to}}</h3>
-<h1>oe</h1>
-<h1>broadcastId</h1>
-{{log "model=" model}}
+<div class="ui grid">
+  <div class="column">
+    <div class="ui segment">
+      <table class="ui celled table">
+        <thead>
+          <tr>
+            <th>время начала продолжения передачи или начала рекламы</th>
+            <th>id-прередачи или null (реклама)</th>
+            <th>время конца программы</th>
+            <th>id-программы</th>
+          </tr>
+        </thead>
+        {{program-list broadcastArray=model}}
+      </table>
+    </div>
+  </div>
+</div>
+
 {{outlet}}
