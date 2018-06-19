@@ -118,6 +118,7 @@ export default Route.extend({
     return broadcasts;
     // return this.store.findAll('channel');
   },
+  // Можно было обойтись без этого метода, данные из хука model попадают в свойство model контроллера. Помещение модели в другое свойство контроллера только запутывает.
   setupController(controller, model) {
     set(controller, 'broadcasts', model);
   },
