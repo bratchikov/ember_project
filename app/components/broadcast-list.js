@@ -1,10 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  tagName: 'tbody',
-  classNames: ['tbody'],
+  tagName: 'tbody', // Для чего этот тег в JS-коде?
+  classNames: ['tbody'], // Для чего этот класс в JS-коде?
+  // Закомментированный код не нужен.
   // attributeBindings: ['tbodyStyle:style'],
   // tbodyStyle: 'background-color: blue; font-size: .9em;',
+  
+  // Хорошо бы писать комментарии с описанием свойств и методов. Рекомендуется использовать yuidoc: https://flexberry.github.io/ru/fp_ember-comments-style-yuidoc.html
   broadcasts: null,
   activeRatingArray: [],
 
@@ -12,15 +15,19 @@ export default Ember.Component.extend({
 
   sortedBroadcasts: Ember.computed.sort('broadcasts', 'sortDefinition'),
   sortDefinition: Ember.computed(function() {
+    // Что это за магическая константа? Для чего тут computed-свойство?
     return [`startTime:asc`];
   }),
 
+  // Заведено целое вычислимое свойство с непонятной целью с одной строкой логики. Зачем?
   getActiveRating: Ember.computed('activeRatingArray', function() {
     const rating = this.get('activeRatingArray');
 
+    // Вывод отладочной информации зачем-то закоммичен.
     console.log(rating)
   }),
 
+  // Лучше не увлекаться событием didRender(), эту же логику можно было реализовать на уровне свойств модели, т.е. в hbs привязаться к свойству class модели, а логику выставления этого класса нужному объекту в модели написать в роуте или контроллере.
   didRender() {
     this._super(...arguments);
     const activeRatingArray = this.get('activeRatingArray');
@@ -35,6 +42,8 @@ export default Ember.Component.extend({
       this.get('broadcastManager').addNameAndInfo(broadcastName, broadcastInfo);
       Ember.$('.ui.profile.modal').modal('show');
     },
+    
+    // Перечитал метод несколько раз, так и не понял, что тут происходит.
     activeRating(index) {
       const someIndex = item => item == index;
       const activeRatingArray = this.get('activeRatingArray');
