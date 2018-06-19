@@ -5,9 +5,10 @@ export default Ember.Controller.extend({
 
   init(){
     this._super(...arguments);
-    this.get('broadcastManager');
+    this.get('broadcastManager'); // Зачем эта строка?
   },
   broadcastManagerObservation: Ember.observer('broadcastManager.broadcastName', function() {
+    // Зачем это здесь?
     console.log('Changed a broadcast name inside of the broadcast-manager');
   }),
 });
