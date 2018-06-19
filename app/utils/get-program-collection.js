@@ -1,4 +1,6 @@
 export default function getProgramCollection(broadcastArray) {
+  
+  // Хорошо бы разбить логику на функции так, чтобы каждая функция была ответственна за определённое действие и не занимала бы больше 40 строк кода. Вложенные if-ы со switch внутри наводят ужас на читающего.
 
   //функция добавления времени
   const concatTime = (startTime, allTime) => {
