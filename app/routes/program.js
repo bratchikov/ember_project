@@ -1,5 +1,6 @@
 import Ember from 'ember';
 
+// В чём тайный смысл все переменные объявлять константами?
 const channels = [
   {
     'id': 0,
@@ -147,6 +148,7 @@ const getBroadcastArray = (programId, channelId) => {
     return program.id == programId ? true : false; //находим нужную программу
   });
 
+  // Не самое удачное название для свойства.
   return broadcastArray.broadcastArray; //массив передач одной программы
 };
 
